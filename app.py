@@ -2,6 +2,18 @@ import streamlit as st
 import datetime
 import requests
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url('https://i.imgur.com/QrK5ZkO.jpeg');
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.set_page_config(page_title="Taxi Fare Predictor", page_icon="🚕")
 
 st.title("🚕 NYC Taxi Fare Predictor")
@@ -67,6 +79,7 @@ if st.button("🚀 Predict fare"):
 
         if fare is not None:
             st.success(f"💵 **Estimated Fare: ${fare:.2f}**")
+            st.snow()
         else:
             st.error("❌ No fare returned by the API. Check parameters or API URL.")
 
