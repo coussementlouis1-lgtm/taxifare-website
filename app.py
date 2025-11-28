@@ -6,8 +6,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url('https://i.imgur.com/QrK5ZkO.jpeg');
-        background-size: cover;
+        background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
     }
     </style>
     """,
